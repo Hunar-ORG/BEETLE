@@ -1,12 +1,13 @@
 "use client";
 
-import Link from "next/link";
+import { useRouter, usePathname } from "next/navigation";
 import Image from "next/image";
 import { motion, useReducedMotion } from "framer-motion";
 import { Instagram, Linkedin, Mail } from "lucide-react";
 import { plusJakartaSans } from "@/lib/fonts";
 import { cn } from "@/lib/utils";
 import { Atmosphere } from "@/components/ui/Atmosphere";
+import { scrollToSectionTarget } from "@/lib/motion";
 
 /**
  * Site-wide Footer Configuration
@@ -45,9 +46,15 @@ export const FOOTER_CONFIG = {
 } as const;
 
 export function Footer() {
+  const router = useRouter();
+  const pathname = usePathname();
   const currentYear = 2026;
   const shouldReduceMotion = useReducedMotion();
   const easeCurve = [0.16, 1, 0.3, 1] as const;
+
+  const handleNav = (href: string) => {
+    scrollToSectionTarget(href, { pathname, router });
+  };
 
   return (
     <footer
@@ -71,8 +78,12 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 sm:gap-14 md:gap-8 items-start">
           {/* Left Column: Large Brand Presence */}
           <div className="md:col-span-6 lg:col-span-7">
-            <Link
+            <a
               href="/"
+              onClick={(e) => {
+                e.preventDefault();
+                handleNav("/");
+              }}
               className="inline-block group focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-emerald-400/50 rounded-sm"
               aria-label="BEETLE — Home"
             >
@@ -83,7 +94,7 @@ export function Footer() {
                 height={36}
                 className="h-8 sm:h-9 md:h-10 w-auto select-none group-hover:opacity-90 transition-opacity"
               />
-            </Link>
+            </a>
           </div>
 
           {/* Right Area: Navigation Columns */}
@@ -96,12 +107,16 @@ export function Footer() {
               <ul className="space-y-3 sm:space-y-3.5">
                 {FOOTER_CONFIG.company.map((item) => (
                   <li key={item.label}>
-                    <Link
+                    <a
                       href={item.href}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        handleNav(item.href);
+                      }}
                       className="text-sm sm:text-base font-normal text-white/75 hover:text-emerald-400 transition-colors duration-200 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-emerald-400/50 rounded-sm"
                     >
                       {item.label}
-                    </Link>
+                    </a>
                   </li>
                 ))}
               </ul>

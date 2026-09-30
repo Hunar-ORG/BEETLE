@@ -23,15 +23,15 @@ export function Hero() {
         aria-hidden="true"
         className="pointer-events-none absolute inset-x-0 top-0 select-none -z-10"
         style={{
-          bottom: "-380px",
+          bottom: "-480px",
+          maskImage:
+            "linear-gradient(180deg, black 0%, black calc(100% - 450px), rgba(0, 0, 0, 0.85) calc(100% - 370px), rgba(0, 0, 0, 0.45) calc(100% - 290px), rgba(0, 0, 0, 0.12) calc(100% - 220px), transparent calc(100% - 150px))",
+          WebkitMaskImage:
+            "linear-gradient(180deg, black 0%, black calc(100% - 450px), rgba(0, 0, 0, 0.85) calc(100% - 370px), rgba(0, 0, 0, 0.45) calc(100% - 290px), rgba(0, 0, 0, 0.12) calc(100% - 220px), transparent calc(100% - 150px))",
           background: `
-            radial-gradient(ellipse 110% 360px at 50% calc(100% - 360px), rgba(19, 216, 192, 0.55) 0%, rgba(0, 200, 120, 0.30) 22%, rgba(0, 143, 90, 0.10) 45%, rgba(2, 20, 14, 0.03) 65%, transparent 80%),
-            radial-gradient(ellipse 55% 280px at 28% calc(100% - 410px), rgba(0, 200, 120, 0.28) 0%, rgba(0, 143, 90, 0.08) 45%, transparent 68%),
-            radial-gradient(ellipse 50% 260px at 74% calc(100% - 425px), rgba(19, 216, 192, 0.18) 0%, transparent 60%),
-            radial-gradient(ellipse 80% 380px at 50% calc(100% - 560px), rgba(0, 143, 90, 0.25) 0%, rgba(6, 36, 28, 0.40) 50%, transparent 80%),
-            radial-gradient(ellipse 40% 30% at 12% 50%, rgba(0, 143, 90, 0.08) 0%, transparent 65%),
-            radial-gradient(ellipse 40% 30% at 88% 48%, rgba(0, 143, 90, 0.06) 0%, transparent 65%),
-            linear-gradient(180deg, #010403 0%, #020706 calc(45% - 150px), #020e08 calc(75% - 100px), #03100a calc(100% - 380px), #010805 calc(100% - 280px), #010403 calc(100% - 180px), #010403 100%)
+            radial-gradient(ellipse 85% 440px at 50% calc(100% - 450px), rgba(112, 204, 77, 0.35) 0%, rgba(112, 204, 77, 0.24) 20%, rgba(112, 204, 77, 0.12) 40%, rgba(112, 204, 77, 0.04) 65%, rgba(112, 204, 77, 0.008) 85%, transparent 100%),
+            radial-gradient(ellipse 115% 660px at 50% calc(100% - 450px), rgba(112, 204, 77, 0.16) 0%, rgba(112, 204, 77, 0.09) 25%, rgba(112, 204, 77, 0.035) 50%, rgba(112, 204, 77, 0.01) 75%, transparent 100%),
+            linear-gradient(180deg, #010403 0%, #010403 calc(100% - 680px), #020704 calc(100% - 450px), #010503 calc(100% - 260px), #010403 100%)
           `,
         }}
       />

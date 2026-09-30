@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
-import { prepareSectionForReplay, smoothScrollTo } from "@/lib/motion";
+import { scrollToSectionTarget } from "@/lib/motion";
 
 const NAV_LINKS = [
   { label: "About us", href: "/#about" },
@@ -23,65 +23,8 @@ export function Navbar() {
 
   // Smooth scroll to anchor with immediate click-time hiding and synchronized reveal
   const scrollToSection = useCallback((href: string) => {
-    if (typeof window === "undefined") return;
-
-    const isHome = href === "/" || href === "/#home" || href === "#home";
-    const id = isHome ? "hero" : href.replace(/^\/?#/, "");
-
-    // On subpages, navigate client-side back to homepage with hash without page reload
-    if (pathname !== "/") {
-      router.push(isHome ? "/" : `/#${id}`);
-      return;
-    }
-
-    const target = isHome ? document.documentElement : document.getElementById(id);
-    if (!target) return;
-
-    // Update history URL without reloading or breaking browser history
-    if (window.location.hash !== (isHome ? "" : `#${id}`)) {
-      window.history.replaceState(null, "", isHome ? "/" : `/#${id}`);
-    }
-
-    const navbarHeight = 96;
-    const targetTop = isHome
-      ? 0
-      : Math.max(0, target.getBoundingClientRect().top + window.scrollY - navbarHeight);
-
-    const isAlreadyInView = isHome
-      ? window.scrollY < 20
-      : Math.abs(window.scrollY - targetTop) < 30;
-
-    const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-    // 1. HIDE AT CLICK TIME (the instant nav is clicked, before scroll begins)
-    prepareSectionForReplay(id, isAlreadyInView);
-
-    // 2. Reduced motion: instant jump
-    if (prefersReduced) {
-      window.scrollTo(0, targetTop);
-      return;
-    }
-
-    // 3. Already in view: prepareSectionForReplay handles intentional 120ms replay
-    if (isAlreadyInView) {
-      return;
-    }
-
-    // 4. Programmatic scroll: smooth, decisive, capped between 0.6s and 0.85s
-    smoothScrollTo(targetTop);
+    scrollToSectionTarget(href, { pathname, router });
   }, [pathname, router]);
-
-  // Direct load or client navigation with hash (e.g. returning from /work/[slug] or direct URL entry)
-  useEffect(() => {
-    if (typeof window === "undefined" || pathname !== "/") return;
-    const hash = window.location.hash;
-    if (hash && hash !== "#" && hash !== "#home") {
-      const timer = setTimeout(() => {
-        scrollToSection(hash);
-      }, 120);
-      return () => clearTimeout(timer);
-    }
-  }, [pathname, scrollToSection]);
 
   // Mobile menu click: unlock scroll lock first, then close and scroll
   const handleMobileNavClick = useCallback(

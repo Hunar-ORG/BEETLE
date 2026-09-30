@@ -16,9 +16,10 @@ export function WorkSection() {
   return (
     <section
       ref={ref}
+      id="work"
       aria-label="Our Work"
       className={cn(
-        "relative w-full bg-[#010403] text-white selection:bg-emerald-500/25 selection:text-emerald-100 pt-24 sm:pt-28 md:pt-32 pb-16 sm:pb-20 md:pb-24",
+        "relative w-full bg-[#010403] text-white selection:bg-emerald-500/25 selection:text-emerald-100 pt-24 sm:pt-28 md:pt-32 pb-16 sm:pb-20 md:pb-24 scroll-mt-16 md:scroll-mt-20",
         plusJakartaSans.className
       )}
     >
@@ -26,7 +27,7 @@ export function WorkSection() {
       <Atmosphere level="atmospheric" position="bottom" />
 
       {/* ── Section Intro: Compact Editorial ── */}
-      <div id="work" className="relative mx-auto max-w-5xl px-6 sm:px-10 mb-6 sm:mb-8 md:mb-9 text-center scroll-mt-28 md:scroll-mt-32">
+      <div className="relative mx-auto max-w-5xl px-6 sm:px-10 mb-10 sm:mb-12 md:mb-14 text-center">
         <motion.p
           initial="hidden"
           animate={controls}

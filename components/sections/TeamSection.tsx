@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { plusJakartaSans } from "@/lib/fonts";
 import { cn } from "@/lib/utils";
@@ -16,23 +17,27 @@ export interface TeamMember {
 const TEAM_MEMBERS: TeamMember[] = [
   {
     id: "member-01",
-    name: "Team Member 01",
+    name: "Usama",
     role: "Co-Founder",
+    image: "/images/projects/Usama.jpg",
   },
   {
     id: "member-02",
-    name: "Team Member 02",
+    name: "Rayyan",
     role: "Co-Founder",
+    image: "/images/projects/Rayyan.png",
   },
   {
     id: "member-03",
-    name: "Team Member 03",
+    name: "Kaleem",
     role: "Co-Founder",
+    image: "/images/projects/Kaleem.jpg",
   },
   {
     id: "member-04",
-    name: "Team Member 04",
+    name: "Suhail",
     role: "Co-Founder",
+    image: "/images/projects/Suhail.jpg",
   },
 ];
 
@@ -81,11 +86,12 @@ export function TeamSection() {
               {/* Image / Portrait Area */}
               <div className="relative aspect-square w-full rounded-xl sm:rounded-2xl overflow-hidden bg-gradient-to-b from-white/[0.07] via-[#040f04]/60 to-[#010803] border border-white/[0.08] transition-all duration-300 ease-out group-hover:border-emerald-500/30 group-hover:-translate-y-1 group-hover:shadow-[0_12px_32px_rgba(0,0,0,0.5)]">
                 {member.image ? (
-                  // eslint-disable-next-line @next/next/no-img-element
-                  <img
+                  <Image
                     src={member.image}
                     alt={member.name}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    fill
+                    sizes="(max-width: 640px) 50vw, (max-width: 1024px) 50vw, 25vw"
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                 ) : (
                   /* Neutral architectural studio portrait placeholder */

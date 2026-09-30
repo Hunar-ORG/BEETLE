@@ -163,7 +163,7 @@ export function ContactSection() {
       ref={ref}
       aria-label="Get In Touch"
       className={cn(
-        "relative w-full overflow-hidden bg-[#010403] text-white selection:bg-emerald-500/25 selection:text-emerald-100 pt-20 sm:pt-28 md:pt-36 pb-24 sm:pb-32 md:pb-40",
+        "relative w-full overflow-hidden bg-[#010403] text-white selection:bg-emerald-500/25 selection:text-emerald-100 pt-10 sm:pt-14 md:pt-16 pb-24 sm:pb-32 md:pb-40",
         plusJakartaSans.className
       )}
     >

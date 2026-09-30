@@ -59,7 +59,7 @@ export function ProcessStep({ step, index, isLast }: ProcessStepProps) {
       </div>
 
       {/* ── Right Column: Step Content & Curated Dual-Panel Visual Mockup ── */}
-      <div className={cn("flex-1 pb-16 sm:pb-24 md:pb-32", isLast && "pb-0")}>
+      <div className={cn("flex-1", isLast ? "pb-0" : "pb-16 sm:pb-24 md:pb-32")}>
         {/* Step Number + Title */}
         <div className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-4">
           <h3 className="text-2xl sm:text-3xl md:text-4xl font-medium tracking-tight text-[#edf4f0]">

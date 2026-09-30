@@ -15,7 +15,7 @@ export function ProcessSection() {
       ref={ref}
       aria-label="Our Process"
       className={cn(
-        "relative w-full overflow-hidden bg-[#010403] text-white selection:bg-emerald-500/25 selection:text-emerald-100 pt-20 sm:pt-28 md:pt-36 pb-28 sm:pb-36 md:pb-44",
+        "relative w-full overflow-hidden bg-[#010403] text-white selection:bg-emerald-500/25 selection:text-emerald-100 pt-20 sm:pt-28 md:pt-36 pb-10 sm:pb-14 md:pb-16",
         plusJakartaSans.className
       )}
     >

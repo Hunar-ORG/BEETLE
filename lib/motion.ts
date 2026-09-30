@@ -19,6 +19,10 @@ export const BEETLE_REPLAY_EVENT = "beetle:replay-section";
 let activeScrollAnimation: { stop: () => void } | null = null;
 
 if (typeof window !== "undefined") {
+  if ("scrollRestoration" in window.history) {
+    window.history.scrollRestoration = "manual";
+  }
+
   const cancelOnUserInteraction = () => {
     if (activeScrollAnimation) {
       activeScrollAnimation.stop();
@@ -27,6 +31,9 @@ if (typeof window !== "undefined") {
   };
   window.addEventListener("wheel", cancelOnUserInteraction, { passive: true });
   window.addEventListener("touchstart", cancelOnUserInteraction, { passive: true });
+  window.addEventListener("beforeunload", () => {
+    window.scrollTo(0, 0);
+  });
 }
 
 /**
@@ -52,7 +59,8 @@ export function smoothScrollTo(
     return;
   }
 
-  const duration = options?.duration ?? Math.min(Math.max(distance * 0.00045, 0.6), 0.85);
+  const computedDuration = Math.min(Math.max(0.70 + (distance / 12000) * 0.28, 0.70), 0.98);
+  const duration = options?.duration ?? computedDuration;
 
   activeScrollAnimation = animate(startY, targetY, {
     duration,
@@ -65,6 +73,74 @@ export function smoothScrollTo(
       options?.onComplete?.();
     },
   });
+}
+
+/**
+ * Smooth in-page navigation handler for internal links (Navbar, Footer, CTA buttons).
+ * Respects sticky header offset, reduced-motion preferences, client-side routing,
+ * and section entrance animations.
+ */
+export function scrollToSectionTarget(
+  href: string,
+  options?: {
+    pathname?: string;
+    router?: { push: (url: string) => void };
+    navbarHeight?: number;
+    duration?: number;
+  }
+) {
+  if (typeof window === "undefined") return;
+
+  const pathname = options?.pathname ?? window.location.pathname;
+  const isHome = href === "/" || href === "/#home" || href === "#home" || href === "";
+  const id = isHome ? "hero" : href.replace(/^\/?#/, "");
+
+  // On subpages, navigate client-side back to homepage with hash without page reload
+  if (pathname !== "/") {
+    if (options?.router) {
+      options.router.push(isHome ? "/" : `/#${id}`);
+    } else {
+      window.location.href = isHome ? "/" : `/#${id}`;
+    }
+    return;
+  }
+
+  const target = isHome ? document.documentElement : document.getElementById(id);
+  if (!target) return;
+
+  // Update history URL without reloading or breaking browser history
+  if (window.location.hash !== (isHome ? "" : `#${id}`)) {
+    window.history.replaceState(null, "", isHome ? window.location.pathname : `/#${id}`);
+  }
+
+  // Account for sticky/fixed header (96px on desktop, 80px on mobile)
+  const navHeight = options?.navbarHeight ?? (window.innerWidth >= 768 ? 96 : 80);
+  const targetTop = isHome
+    ? 0
+    : Math.max(0, target.getBoundingClientRect().top + window.scrollY - navHeight);
+
+  const isAlreadyInView = isHome
+    ? window.scrollY < 20
+    : Math.abs(window.scrollY - targetTop) < 30;
+
+  const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  // 1. Prepare section for replay entrance
+  prepareSectionForReplay(id, isAlreadyInView);
+
+  // 2. Reduced motion: instant jump
+  if (prefersReduced) {
+    window.scrollTo(0, targetTop);
+    return;
+  }
+
+  // 3. Already in view: prepareSectionForReplay handles intentional 120ms replay
+  if (isAlreadyInView) {
+    return;
+  }
+
+  // 4. Programmatic scroll: smooth, decisive, 700-1000ms duration with premium easing
+  smoothScrollTo(targetTop, { duration: options?.duration });
 }
 
 /**
