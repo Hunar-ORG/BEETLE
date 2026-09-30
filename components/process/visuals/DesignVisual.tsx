@@ -154,7 +154,7 @@ export function DesignVisual() {
                 rx="120"
                 ry="38"
                 fill="none"
-                stroke="rgba(0, 220, 130, 0.25)"
+                stroke="rgba(112, 204, 77, 0.3)"
                 strokeWidth="1.5"
                 strokeDasharray="4 4"
               />

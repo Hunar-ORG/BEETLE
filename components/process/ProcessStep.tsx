@@ -45,7 +45,7 @@ export function ProcessStep({ step, index, isLast }: ProcessStepProps) {
       {/* ── Left Column: Timeline Guide Line + Emerald Node ── */}
       <div className="relative flex flex-col items-center">
         {/* Emerald Node */}
-        <div className="relative z-10 flex h-7 w-7 sm:h-8 sm:w-8 items-center justify-center rounded-full border border-emerald-400/40 bg-[#010403] shadow-[0_0_16px_rgba(0,200,120,0.35)]">
+        <div className="relative z-10 flex h-7 w-7 sm:h-8 sm:w-8 items-center justify-center rounded-full border border-emerald-400/40 bg-[#010403] shadow-[0_0_16px_rgba(112,204,77,0.4)]">
           <span className="h-2 w-2 rounded-full bg-emerald-400" />
         </div>
 

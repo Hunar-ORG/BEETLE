@@ -44,7 +44,7 @@ export function MissionSection() {
             className="pointer-events-none absolute -top-16 -right-16 sm:-top-20 sm:-right-20 w-[300px] sm:w-[420px] md:w-[480px] h-[300px] sm:h-[420px] md:h-[480px] rounded-full blur-[70px] sm:blur-[95px] md:blur-[115px] opacity-45 mix-blend-screen"
             style={{
               background:
-                "radial-gradient(circle at 60% 45%, rgba(0, 220, 130, 0.35) 0%, rgba(0, 160, 95, 0.18) 35%, rgba(2, 45, 26, 0.08) 65%, transparent 80%)",
+                "radial-gradient(circle at 60% 45%, rgba(112, 204, 77, 0.35) 0%, rgba(112, 204, 77, 0.16) 35%, rgba(112, 204, 77, 0.04) 65%, transparent 80%)",
             }}
             aria-hidden="true"
           />
@@ -54,7 +54,7 @@ export function MissionSection() {
             className="pointer-events-none absolute -bottom-16 right-0 w-[260px] sm:w-[340px] h-[260px] sm:h-[340px] rounded-full blur-[80px] sm:blur-[100px] opacity-20 mix-blend-screen"
             style={{
               background:
-                "radial-gradient(circle at center, rgba(16, 185, 129, 0.18) 0%, rgba(5, 150, 105, 0.06) 50%, transparent 75%)",
+                "radial-gradient(circle at center, rgba(112, 204, 77, 0.18) 0%, rgba(112, 204, 77, 0.04) 50%, transparent 75%)",
             }}
             aria-hidden="true"
           />

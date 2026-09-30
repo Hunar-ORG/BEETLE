@@ -90,13 +90,7 @@ export function AboutPrinciples() {
               initial="hidden"
               animate={controls}
               variants={maskedPresenceVariants}
-              className="text-7xl sm:text-8xl md:text-9xl lg:text-[140px] xl:text-[160px] 2xl:text-[176px] font-medium leading-[0.92] tracking-[-0.035em] text-transparent drop-shadow-[0_12px_40px_rgba(0,0,0,0.6)] will-change-transform"
-              style={{
-                background:
-                  "linear-gradient(180deg, #d1fae5 0%, #34d399 22%, #00c878 52%, #008f5a 82%, #043825 100%)",
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-              }}
+              className="text-7xl sm:text-8xl md:text-9xl lg:text-[140px] xl:text-[160px] 2xl:text-[176px] font-medium leading-[0.92] tracking-[-0.035em] text-white drop-shadow-[0_12px_40px_rgba(0,0,0,0.6)] will-change-transform"
             >
               Presence
             </motion.h2>

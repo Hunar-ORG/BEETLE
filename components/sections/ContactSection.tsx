@@ -321,7 +321,7 @@ export function ContactSection() {
                     className={cn(
                       "flex items-center gap-2 rounded-full border px-4 py-2 text-xs sm:text-sm font-medium transition-all duration-150",
                       isSelected
-                        ? "border-emerald-400/80 bg-emerald-950/60 text-emerald-300 shadow-[0_0_12px_rgba(0,220,130,0.18)]"
+                        ? "border-emerald-400/80 bg-emerald-950/60 text-emerald-300 shadow-[0_0_12px_rgba(112,204,77,0.22)]"
                         : "border-white/[0.08] bg-white/[0.02] text-white/70 hover:border-white/20 hover:text-white"
                     )}
                   >
@@ -358,7 +358,7 @@ export function ContactSection() {
                     className={cn(
                       "flex items-center gap-2 rounded-full border px-4 py-2 text-xs sm:text-sm font-medium transition-all duration-150",
                       isSelected
-                        ? "border-emerald-400/80 bg-emerald-950/60 text-emerald-300 shadow-[0_0_12px_rgba(0,220,130,0.18)]"
+                        ? "border-emerald-400/80 bg-emerald-950/60 text-emerald-300 shadow-[0_0_12px_rgba(112,204,77,0.22)]"
                         : "border-white/[0.08] bg-white/[0.02] text-white/70 hover:border-white/20 hover:text-white"
                     )}
                   >

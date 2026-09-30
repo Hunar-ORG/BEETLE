@@ -79,7 +79,7 @@ export function TeamSection() {
               className="group flex flex-col"
             >
               {/* Image / Portrait Area */}
-              <div className="relative aspect-square w-full rounded-xl sm:rounded-2xl overflow-hidden bg-gradient-to-b from-white/[0.07] via-[#02140d]/60 to-[#010805] border border-white/[0.08] transition-all duration-300 ease-out group-hover:border-emerald-500/30 group-hover:-translate-y-1 group-hover:shadow-[0_12px_32px_rgba(0,0,0,0.5)]">
+              <div className="relative aspect-square w-full rounded-xl sm:rounded-2xl overflow-hidden bg-gradient-to-b from-white/[0.07] via-[#040f04]/60 to-[#010803] border border-white/[0.08] transition-all duration-300 ease-out group-hover:border-emerald-500/30 group-hover:-translate-y-1 group-hover:shadow-[0_12px_32px_rgba(0,0,0,0.5)]">
                 {member.image ? (
                   // eslint-disable-next-line @next/next/no-img-element
                   <img

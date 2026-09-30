@@ -19,13 +19,13 @@ export function Hero() {
       className="relative flex min-h-screen w-full flex-col justify-between items-center -mt-[80px] md:-mt-[96px] pt-[80px] md:pt-[96px] px-4 sm:px-6 md:px-8 text-center select-none overflow-hidden"
       style={{
         background: `
-          radial-gradient(ellipse 110% 60% at 50% 102%, rgba(19, 216, 192, 0.55) 0%, rgba(0, 200, 120, 0.30) 28%, rgba(0, 143, 90, 0.10) 55%, transparent 75%),
-          radial-gradient(ellipse 55% 45% at 28% 96%, rgba(0, 200, 120, 0.28) 0%, rgba(0, 143, 90, 0.08) 50%, transparent 70%),
-          radial-gradient(ellipse 50% 40% at 74% 94%, rgba(19, 216, 192, 0.18) 0%, transparent 60%),
-          radial-gradient(ellipse 80% 55% at 50% 78%, rgba(0, 143, 90, 0.25) 0%, rgba(6, 36, 28, 0.40) 50%, transparent 80%),
-          radial-gradient(ellipse 40% 30% at 12% 50%, rgba(0, 143, 90, 0.08) 0%, transparent 65%),
-          radial-gradient(ellipse 40% 30% at 88% 48%, rgba(0, 143, 90, 0.06) 0%, transparent 65%),
-          linear-gradient(180deg, #010403 0%, #020706 45%, #020e08 75%, #04120d 100%)
+          radial-gradient(ellipse 110% 60% at 50% 102%, rgba(112, 204, 77, 0.46) 0%, rgba(112, 204, 77, 0.22) 32%, rgba(112, 204, 77, 0.06) 60%, transparent 75%),
+          radial-gradient(ellipse 55% 45% at 28% 96%, rgba(112, 204, 77, 0.24) 0%, rgba(112, 204, 77, 0.06) 48%, transparent 70%),
+          radial-gradient(ellipse 50% 40% at 74% 94%, rgba(112, 204, 77, 0.18) 0%, transparent 60%),
+          radial-gradient(ellipse 80% 55% at 50% 80%, rgba(112, 204, 77, 0.14) 0%, rgba(112, 204, 77, 0.04) 50%, transparent 80%),
+          radial-gradient(ellipse 40% 30% at 12% 52%, rgba(112, 204, 77, 0.03) 0%, transparent 65%),
+          radial-gradient(ellipse 40% 30% at 88% 50%, rgba(112, 204, 77, 0.02) 0%, transparent 65%),
+          linear-gradient(180deg, #010403 0%, #010403 50%, #010804 80%, #020c06 100%)
         `,
       }}
     >

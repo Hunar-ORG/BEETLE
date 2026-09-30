@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion, useReducedMotion } from "framer-motion";
 import { Instagram, Linkedin, Mail } from "lucide-react";
 import { plusJakartaSans } from "@/lib/fonts";
@@ -75,9 +76,13 @@ export function Footer() {
               className="inline-block group focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-emerald-400/50 rounded-sm"
               aria-label="BEETLE — Home"
             >
-              <span className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-[0.2em] text-white group-hover:text-white/90 transition-colors">
-                BEETLE
-              </span>
+              <Image
+                src="/brand/beetle-wordmark.svg"
+                alt="BEETLE"
+                width={170}
+                height={36}
+                className="h-8 sm:h-9 md:h-10 w-auto select-none group-hover:opacity-90 transition-opacity"
+              />
             </Link>
           </div>
 

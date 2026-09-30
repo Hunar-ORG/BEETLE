@@ -65,7 +65,7 @@ export function ProcessHero({ controls }: ProcessHeroProps) {
               e.preventDefault();
               // Future PDF integration hook
             }}
-            className="group relative inline-flex items-center gap-2.5 rounded-full border border-emerald-500/35 bg-emerald-500/[0.08] px-5 sm:px-6 py-2.5 sm:py-3 text-xs sm:text-[13px] font-medium tracking-[0.16em] text-emerald-300 backdrop-blur-md transition-all duration-300 hover:border-emerald-400/60 hover:bg-emerald-500/18 hover:text-white hover:shadow-[0_0_24px_rgba(0,200,120,0.18)] focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 select-none"
+            className="group relative inline-flex items-center gap-2.5 rounded-full border border-emerald-500/35 bg-emerald-500/[0.08] px-5 sm:px-6 py-2.5 sm:py-3 text-xs sm:text-[13px] font-medium tracking-[0.16em] text-emerald-300 backdrop-blur-md transition-all duration-300 hover:border-emerald-400/60 hover:bg-emerald-500/18 hover:text-white hover:shadow-[0_0_24px_rgba(112,204,77,0.22)] focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 select-none"
           >
             <Download className="h-4 w-4 transition-transform duration-200 group-hover:-translate-y-0.5" />
             <span>DOWNLOAD PDF</span>
@@ -93,7 +93,7 @@ export function ProcessHero({ controls }: ProcessHeroProps) {
             className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] sm:w-[750px] h-[300px] sm:h-[420px] rounded-full blur-[130px] opacity-25 mix-blend-screen"
             style={{
               background:
-                "radial-gradient(circle at center, rgba(0, 220, 130, 0.4) 0%, rgba(0, 143, 90, 0.15) 50%, transparent 75%)",
+                "radial-gradient(circle at center, rgba(112, 204, 77, 0.4) 0%, rgba(112, 204, 77, 0.12) 50%, transparent 75%)",
             }}
             aria-hidden="true"
           />

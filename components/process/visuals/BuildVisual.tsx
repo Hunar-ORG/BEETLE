@@ -128,7 +128,7 @@ export function BuildVisual() {
         </div>
 
         {/* Visual Component Frame with Resize Anchor Handles */}
-        <div className="my-3 rounded-lg border-2 border-emerald-400/80 bg-black/60 p-4 relative flex items-center justify-center shadow-[0_0_20px_rgba(0,220,130,0.12)]">
+        <div className="my-3 rounded-lg border-2 border-emerald-400/80 bg-black/60 p-4 relative flex items-center justify-center shadow-[0_0_20px_rgba(112,204,77,0.18)]">
           {/* Corner Transform Handles */}
           <span className="absolute -top-1.5 -left-1.5 h-3 w-3 rounded-sm border border-emerald-400 bg-white" />
           <span className="absolute -top-1.5 -right-1.5 h-3 w-3 rounded-sm border border-emerald-400 bg-white" />

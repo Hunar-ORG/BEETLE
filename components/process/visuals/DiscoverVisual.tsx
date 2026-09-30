@@ -60,7 +60,7 @@ export function DiscoverVisual() {
             {/* Iso Roads / Terrain lines */}
             <path
               d="M-20,180 L280,30 L560,170"
-              stroke="rgba(0, 220, 130, 0.18)"
+              stroke="rgba(112, 204, 77, 0.25)"
               strokeWidth="1.5"
               fill="none"
             />
@@ -179,7 +179,7 @@ export function DiscoverVisual() {
           </div>
 
           {/* Row 3: BEETLE Target Positioning */}
-          <div className="rounded-lg border border-emerald-500/40 bg-emerald-950/30 p-2.5 shadow-[0_0_20px_rgba(0,220,130,0.15)]">
+          <div className="rounded-lg border border-emerald-500/40 bg-emerald-950/30 p-2.5 shadow-[0_0_20px_rgba(112,204,77,0.2)]">
             <div className="flex items-center justify-between text-[9px] font-mono text-emerald-400 font-bold mb-1.5">
               <span className="flex items-center gap-1">
                 <Target className="h-3 w-3" />

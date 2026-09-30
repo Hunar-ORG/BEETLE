@@ -41,7 +41,7 @@ export function ProjectCard({
       aria-label={`View ${project.name} (${project.category})`}
     >
       {/* ── Screenshot / Preview Frame ── */}
-      <div className="relative aspect-[16/9] w-full overflow-hidden rounded-xl sm:rounded-2xl border border-white/[0.08] bg-[#020705] shadow-[0_20px_50px_rgba(0,0,0,0.65)] transition-all duration-500 group-hover:border-emerald-500/35 group-hover:shadow-[0_24px_60px_rgba(0,200,120,0.1)]">
+      <div className="relative aspect-[16/9] w-full overflow-hidden rounded-xl sm:rounded-2xl border border-white/[0.08] bg-[#020705] shadow-[0_20px_50px_rgba(0,0,0,0.65)] transition-all duration-500 group-hover:border-emerald-500/35 group-hover:shadow-[0_24px_60px_rgba(112,204,77,0.12)]">
         {/* Top Edge Specular Highlight */}
         <div
           className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-emerald-400/30 via-white/20 to-transparent z-20"

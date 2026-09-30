@@ -4,6 +4,7 @@ import { useCallback, useEffect, useState } from "react";
 import { useRouter, usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { prepareSectionForReplay, smoothScrollTo } from "@/lib/motion";
 
@@ -164,9 +165,14 @@ export function Navbar() {
               className="flex items-center gap-1.5 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-white/30 rounded-md transition-opacity duration-200 hover:opacity-80"
               aria-label="BEETLE — back to top"
             >
-              <span className="text-[15px] font-bold tracking-[0.2em] text-white">
-                BEETLE
-              </span>
+              <Image
+                src="/brand/beetle-wordmark.svg"
+                alt="BEETLE"
+                width={104}
+                height={22}
+                className="h-5 sm:h-[22px] w-auto select-none"
+                priority
+              />
             </a>
 
             {/* ── Desktop nav links ────────────────────────────── */}
@@ -180,7 +186,7 @@ export function Navbar() {
                       onClick={(e) => { e.preventDefault(); scrollToSection(href); }}
                       className={cn(
                         isGetInTouch
-                          ? "rounded-lg px-4 py-2 text-[14px] font-semibold tracking-wide text-white bg-[#00a865] hover:bg-[#00bf74] hover:shadow-[0_0_16px_rgba(0,200,120,0.35)] transition-all duration-200 active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#00c878]/50"
+                          ? "rounded-lg px-4 py-2 text-[14px] font-semibold tracking-wide text-[#010403] bg-[#70cc4d] hover:bg-[#7de056] hover:shadow-[0_0_18px_rgba(112,204,77,0.45)] transition-all duration-200 active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#70cc4d]/60"
                           : "nav-link text-[14px] font-medium tracking-wide text-white/70 transition-colors duration-200 hover:text-white focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-white/30 rounded-sm",
                       )}
                     >
@@ -243,9 +249,14 @@ export function Navbar() {
                 className="flex items-center gap-1.5 focus-visible:outline-none"
                 aria-label="BEETLE — back to top"
               >
-                <span className="text-[16px] font-bold tracking-[0.2em] text-white">
-                  BEETLE
-                </span>
+                <Image
+                  src="/brand/beetle-wordmark.svg"
+                  alt="BEETLE"
+                  width={104}
+                  height={22}
+                  className="h-5 sm:h-[22px] w-auto select-none"
+                  priority
+                />
               </a>
 
               {/* Framed close button matching Reference 4 */}

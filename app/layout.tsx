@@ -9,6 +9,11 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "BEETLE",
   description: "Web design and development company",
+  icons: {
+    icon: "/brand/beetle-mark.svg",
+    shortcut: "/brand/beetle-mark.svg",
+    apple: "/brand/beetle-mark.svg",
+  },
 };
 
 export default function RootLayout({
