@@ -59,14 +59,14 @@ export function AboutPrinciples() {
       ref={ref}
       aria-label="Our Leading Principle — Presence"
       className={cn(
-        "relative w-full overflow-hidden bg-[#010403] text-white selection:bg-emerald-500/25 selection:text-emerald-100",
+        "relative w-full overflow-x-clip overflow-y-visible bg-transparent text-white selection:bg-emerald-500/25 selection:text-emerald-100",
         plusJakartaSans.className
       )}
     >
-      {/* ── Level 2 Atmosphere: Top bleed from hero + subtle bottom spill ── */}
-      <Atmosphere level="atmospheric" position="split" />
+      {/* ── Level 2 Atmosphere: Subtle bottom spill into next section ── */}
+      <Atmosphere level="atmospheric" position="bottom" />
 
-      <div className="relative mx-auto max-w-4xl lg:max-w-5xl px-6 sm:px-8 md:px-12 py-20 sm:py-24 md:py-28 lg:py-32">
+      <div className="relative z-10 mx-auto max-w-4xl lg:max-w-5xl px-6 sm:px-8 md:px-12 py-20 sm:py-24 md:py-28 lg:py-32">
         {/* ── HERO OF SECTION: Eyebrow + Presence + Supporting Statement ── */}
         <div id="about" className="flex flex-col items-center text-center scroll-mt-28 md:scroll-mt-32">
           {/* 1. Small eyebrow */}

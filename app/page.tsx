@@ -8,7 +8,7 @@ import { ContactSection } from "@/components/sections/ContactSection";
 
 export default function Home() {
   return (
-    <main id="home" className="bg-[#010403]">
+    <main id="home" className="bg-[#010403] overflow-x-clip">
       <Hero />
       <AboutPrinciples />
       <TeamSection />

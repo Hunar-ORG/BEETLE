@@ -16,19 +16,25 @@ export function Hero() {
       ref={ref}
       id="hero"
       aria-label="Hero"
-      className="relative flex min-h-screen w-full flex-col justify-between items-center -mt-[80px] md:-mt-[96px] pt-[80px] md:pt-[96px] px-4 sm:px-6 md:px-8 text-center select-none overflow-hidden"
-      style={{
-        background: `
-          radial-gradient(ellipse 110% 60% at 50% 102%, rgba(112, 204, 77, 0.46) 0%, rgba(112, 204, 77, 0.22) 32%, rgba(112, 204, 77, 0.06) 60%, transparent 75%),
-          radial-gradient(ellipse 55% 45% at 28% 96%, rgba(112, 204, 77, 0.24) 0%, rgba(112, 204, 77, 0.06) 48%, transparent 70%),
-          radial-gradient(ellipse 50% 40% at 74% 94%, rgba(112, 204, 77, 0.18) 0%, transparent 60%),
-          radial-gradient(ellipse 80% 55% at 50% 80%, rgba(112, 204, 77, 0.14) 0%, rgba(112, 204, 77, 0.04) 50%, transparent 80%),
-          radial-gradient(ellipse 40% 30% at 12% 52%, rgba(112, 204, 77, 0.03) 0%, transparent 65%),
-          radial-gradient(ellipse 40% 30% at 88% 50%, rgba(112, 204, 77, 0.02) 0%, transparent 65%),
-          linear-gradient(180deg, #010403 0%, #010403 50%, #010804 80%, #020c06 100%)
-        `,
-      }}
+      className="relative isolate flex min-h-screen w-full flex-col justify-between items-center -mt-[80px] md:-mt-[96px] pt-[80px] md:pt-[96px] px-4 sm:px-6 md:px-8 text-center select-none"
     >
+      {/* ── Continuous Atmospheric Field: Unified light source extending naturally through boundary into AboutPrinciples ── */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-x-0 top-0 select-none -z-10"
+        style={{
+          bottom: "-380px",
+          background: `
+            radial-gradient(ellipse 110% 360px at 50% calc(100% - 360px), rgba(19, 216, 192, 0.55) 0%, rgba(0, 200, 120, 0.30) 22%, rgba(0, 143, 90, 0.10) 45%, rgba(2, 20, 14, 0.03) 65%, transparent 80%),
+            radial-gradient(ellipse 55% 280px at 28% calc(100% - 410px), rgba(0, 200, 120, 0.28) 0%, rgba(0, 143, 90, 0.08) 45%, transparent 68%),
+            radial-gradient(ellipse 50% 260px at 74% calc(100% - 425px), rgba(19, 216, 192, 0.18) 0%, transparent 60%),
+            radial-gradient(ellipse 80% 380px at 50% calc(100% - 560px), rgba(0, 143, 90, 0.25) 0%, rgba(6, 36, 28, 0.40) 50%, transparent 80%),
+            radial-gradient(ellipse 40% 30% at 12% 50%, rgba(0, 143, 90, 0.08) 0%, transparent 65%),
+            radial-gradient(ellipse 40% 30% at 88% 48%, rgba(0, 143, 90, 0.06) 0%, transparent 65%),
+            linear-gradient(180deg, #010403 0%, #020706 calc(45% - 150px), #020e08 calc(75% - 100px), #03100a calc(100% - 380px), #010805 calc(100% - 280px), #010403 calc(100% - 180px), #010403 100%)
+          `,
+        }}
+      />
       {/* Top spacer to position headline in the primary optical center */}
       <div className="w-full pt-16 sm:pt-20 md:pt-24 lg:pt-28" aria-hidden="true" />
 
