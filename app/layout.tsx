@@ -9,11 +9,36 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "BEETLE",
-  description: "Web design and development company",
+  description:
+    "BEETLE is a web design and development studio that makes every business impossible to overlook.",
+  metadataBase: new URL("https://beetle.works"),
   icons: {
     icon: "/brand/beetle-mark.svg",
     shortcut: "/brand/beetle-mark.svg",
     apple: "/brand/beetle-mark.svg",
+  },
+  openGraph: {
+    title: "BEETLE",
+    description:
+      "BEETLE is a web design and development studio that makes every business impossible to overlook.",
+    url: "https://beetle.works/",
+    siteName: "BEETLE",
+    type: "website",
+    images: [
+      {
+        url: "https://beetle.works/images/projects/preview.png",
+        width: 1200,
+        height: 630,
+        alt: "BEETLE website preview",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "BEETLE",
+    description:
+      "BEETLE is a web design and development studio that makes every business impossible to overlook.",
+    images: ["https://beetle.works/images/projects/preview.png"],
   },
 };
 
