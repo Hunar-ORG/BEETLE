@@ -18,25 +18,25 @@ const TEAM_MEMBERS: TeamMember[] = [
   {
     id: "member-01",
     name: "Usama",
-    role: "Co-Founder",
+    role: "Full Stack Developer + DevOps Engineer",
     image: "/images/projects/Usama.jpg",
   },
   {
     id: "member-02",
     name: "Rayyan",
-    role: "Co-Founder",
+    role: "UI/UX Designer + Frontend Developer",
     image: "/images/projects/Rayyan.png",
   },
   {
     id: "member-03",
     name: "Kaleem",
-    role: "Co-Founder",
+    role: "Full Stack Developer + Network Engineer",
     image: "/images/projects/Kaleem.jpg",
   },
   {
     id: "member-04",
     name: "Suhail",
-    role: "Co-Founder",
+    role: "Automation Tester",
     image: "/images/projects/Suhail.jpg",
   },
 ];
