@@ -23,22 +23,19 @@ export const FOOTER_CONFIG = {
   connect: [
     {
       label: "LinkedIn",
-      // Placeholder: replace with actual company LinkedIn URL when live
-      href: "https://www.linkedin.com",
+      href: "https://www.linkedin.com/company/beetle.works/home/?viewAsMember=true",
       isExternal: true,
       icon: Linkedin,
     },
     {
       label: "Instagram",
-      // Placeholder: replace with actual company Instagram URL when live
-      href: "https://www.instagram.com",
+      href: "https://www.instagram.com/beetlee.works/",
       isExternal: true,
       icon: Instagram,
     },
     {
       label: "Email",
-      // Placeholder: replace with actual company email when live
-      href: "mailto:hello@beetle.design",
+      href: "mailto:ua186217@gmail.com",
       isExternal: true,
       icon: Mail,
     },
